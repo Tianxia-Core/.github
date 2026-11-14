@@ -1,0 +1,198 @@
+{
+  "kit": "RASA-X-MACHINA & tianxiaOS Official Brand, Logo & Press Kit",
+  "edition": "2026.11-V2",
+  "canonical_portal": "https://rasaxmachina.com/press",
+  "file_count": 38,
+  "files": [
+    {
+      "path": "01-logos/lockups-and-social/dual-lockup-rxm-x-tianxiaos-1800x328.png",
+      "bytes": 188786,
+      "sha256": "55a06d37cc4ba8d303512c9e23fb7013a1bfddc103fd679dd55b5d28af12c088"
+    },
+    {
+      "path": "01-logos/lockups-and-social/dual-lockup-rxm-x-tianxiaos.svg",
+      "bytes": 2026,
+      "sha256": "1643a7a126557c72b9cdd48b3baa1db9ff9f53d618e89d4fce1434b4b79547d8"
+    },
+    {
+      "path": "01-logos/lockups-and-social/og-press-card-1200x630.png",
+      "bytes": 320889,
+      "sha256": "1075706ec08cb251a59bf7695fe171cb54b3d8047a1830a99d358efe2de0d1e8"
+    },
+    {
+      "path": "01-logos/lockups-and-social/og-press-card-1200x630.svg",
+      "bytes": 2386,
+      "sha256": "6d6cb384b8d1ae6adeb6246b3f619d5e50c4a2eada398736b2459e8af784a51a"
+    },
+    {
+      "path": "01-logos/lockups-and-social/social-banner-rasaxmachina-1500x500.png",
+      "bytes": 272384,
+      "sha256": "d67df8f140907bdcd2e8245f771cb07cf7e5814223f7abf0545e497b9ab1d4d7"
+    },
+    {
+      "path": "01-logos/lockups-and-social/social-banner-rasaxmachina-1500x500.svg",
+      "bytes": 2364,
+      "sha256": "264bde2cb630ede1e34670a27f676dc05b0140d44e0d1adc95d0ad7ddcffc672"
+    },
+    {
+      "path": "01-logos/lockups-and-social/social-banner-tianxiaos-1500x500.png",
+      "bytes": 298061,
+      "sha256": "7b0b16aa2b727f98aea50f59297f0a0c48434c8e59fec94cb3c55e0bf01fb1da"
+    },
+    {
+      "path": "01-logos/lockups-and-social/social-banner-tianxiaos-1500x500.svg",
+      "bytes": 2207,
+      "sha256": "ef3212a88c01283a623aece65a1c84fa02500dccbebcc7308ac0b6b9cc5260f8"
+    },
+    {
+      "path": "01-logos/rasa-x-machina/rxm-icon-512x512.png",
+      "bytes": 122178,
+      "sha256": "2188b1afb0e0f71557afb30c89841904fd51317eb083770bf5d7691b2e041364"
+    },
+    {
+      "path": "01-logos/rasa-x-machina/rxm-icon-mark.svg",
+      "bytes": 1286,
+      "sha256": "439ac977ee86541dfbe3443728257eb6e5d1937fc593647901473924ea5cffac"
+    },
+    {
+      "path": "01-logos/rasa-x-machina/rxm-wordmark-1600x366.png",
+      "bytes": 148344,
+      "sha256": "ad5910b414ddf617d2b36681660da198ecbfbe25cf3c243f185da8b6f1d972dd"
+    },
+    {
+      "path": "01-logos/rasa-x-machina/rxm-wordmark-gradient-dark.svg",
+      "bytes": 1251,
+      "sha256": "931c3a173771f41e0a6cded140c93706f77eef9140a747552139ad5d5aee8f82"
+    },
+    {
+      "path": "01-logos/rasa-x-machina/rxm-wordmark-gradient-transparent.svg",
+      "bytes": 796,
+      "sha256": "a683f0a836574031aa03743a887463e7edf523875eddcf35de8fbdea90ced3fb"
+    },
+    {
+      "path": "01-logos/rasa-x-machina/rxm-wordmark-monochrome-obsidian.svg",
+      "bytes": 575,
+      "sha256": "50cb79881a73e47f1f09ee493997b72da5d1f222669bea799fa30f649002a17f"
+    },
+    {
+      "path": "01-logos/rasa-x-machina/rxm-wordmark-monochrome-white.svg",
+      "bytes": 572,
+      "sha256": "3739199ee8defe959b86f65e77e61979ae5428b8e345dace309954d9ce5ee1a8"
+    },
+    {
+      "path": "01-logos/tianxiaos/tianxiaos-icon-512x512.png",
+      "bytes": 127144,
+      "sha256": "52893870921fec9d4dc997d328533673be9589d92b7f58f4b8e7ddd718e77c40"
+    },
+    {
+      "path": "01-logos/tianxiaos/tianxiaos-icon-mark.svg",
+      "bytes": 1283,
+      "sha256": "af0adb5810b0871ca06c10cd0c2a0b42163c6be2c82349abcac48c14a5ed313c"
+    },
+    {
+      "path": "01-logos/tianxiaos/tianxiaos-wordmark-1520x440.png",
+      "bytes": 162202,
+      "sha256": "7722e2e4baa9f43dc8c9abb6b752c2c1a42ff2212eb222c5c5282111751c89ac"
+    },
+    {
+      "path": "01-logos/tianxiaos/tianxiaos-wordmark-monochrome-obsidian.svg",
+      "bytes": 585,
+      "sha256": "81b04a46e06e0775ac7cefd9c34884fd60babfb679b3288d1bc85e3144b78d55"
+    },
+    {
+      "path": "01-logos/tianxiaos/tianxiaos-wordmark-monochrome-white.svg",
+      "bytes": 582,
+      "sha256": "b0415cf5603610c094ce3035f6ff173b028cc8b6b5f539d0bc8a6267cb019417"
+    },
+    {
+      "path": "01-logos/tianxiaos/tianxiaos-wordmark-purple-dark.svg",
+      "bytes": 1257,
+      "sha256": "0e7baacce7d238e2e228fb9a786b5c3c1615433fe68e8a79cb0b2ab35ec4cb29"
+    },
+    {
+      "path": "01-logos/tianxiaos/tianxiaos-wordmark-purple-transparent.svg",
+      "bytes": 804,
+      "sha256": "f4efe43dbe0af436dc4b4dd3962a585cde098a94ca448f21c1568b019e61088a"
+    },
+    {
+      "path": "02-design-tokens/DESIGN.md",
+      "bytes": 4795,
+      "sha256": "c68ba9bab458a0a28fadf6d878d9cf1a1de367d503ee43437c27bd2e2172ab90"
+    },
+    {
+      "path": "02-design-tokens/brandkit.css",
+      "bytes": 8493,
+      "sha256": "65f90d4d5bf8b0df5205a9eb0f50fceec22e6b335aa6e2485e1210a3b1ff7131"
+    },
+    {
+      "path": "02-design-tokens/brandkit.json",
+      "bytes": 3835,
+      "sha256": "443a05af73b2e8cf348a603757ae48e2ef838d9c0e653608e36ebd76aea78f24"
+    },
+    {
+      "path": "02-design-tokens/tailwind.brand.config.js",
+      "bytes": 1420,
+      "sha256": "98be49f0a3ff93424d5ed535c25658acdc3c502981a0a12cb38776c4815e8e09"
+    },
+    {
+      "path": "03-brand-story-and-founder/BOILERPLATES.md",
+      "bytes": 3926,
+      "sha256": "15ec805d7e44d9d1f567e9380f37c6189bb1ea8c8efe6eee9a79ac4b24d9a3c8"
+    },
+    {
+      "path": "03-brand-story-and-founder/BRAND_STORY.md",
+      "bytes": 3980,
+      "sha256": "18b522214a7df573976c138ab04a9e93d77e23b7a3e361eaf93181f9b4fd22e1"
+    },
+    {
+      "path": "03-brand-story-and-founder/FOUNDER_TRAJECTORY.md",
+      "bytes": 4957,
+      "sha256": "e7f3731b4dc0beeeeab2b9d5c540ae015cbb2b3aca41ac0059e95b4c01d99afd"
+    },
+    {
+      "path": "04-customer-journey/CUSTOMER_JOURNEY_AND_PERSONAS.md",
+      "bytes": 5624,
+      "sha256": "de0f2386b7abf6a1603f090b8d0ba458af445a3e5d52fc6b08ed4bda97c3f6d0"
+    },
+    {
+      "path": "04-customer-journey/JOURNEY_ARCHITECTURE.mmd",
+      "bytes": 904,
+      "sha256": "fbc5b425c5e7bd1a2580041ddc8f5e6b0568580e8d17e61cb621efcaa47cbf4c"
+    },
+    {
+      "path": "05-house-style-and-editorial/HOUSE_STYLE_GUIDE.md",
+      "bytes": 3828,
+      "sha256": "633b08e2133171cf8d4c89dd103c72a38561a2918c9c06682380394fefd2b4af"
+    },
+    {
+      "path": "05-house-style-and-editorial/TERMINOLOGY_LEXICON.md",
+      "bytes": 2526,
+      "sha256": "2cb60d0be7e1ced7194c6af41f034fbd7b70f829263cf7d23d333ae65e4d68b0"
+    },
+    {
+      "path": "06-aesthetic-and-visual-system/AESTHETIC_MANIFESTO.md",
+      "bytes": 2599,
+      "sha256": "964c82d2b7b0cbd3d41bdd677fa4218209796bacbdcbcd88b17d47e08f1dffa8"
+    },
+    {
+      "path": "06-aesthetic-and-visual-system/LOGO_USAGE_AND_CLEARSPACE.md",
+      "bytes": 2231,
+      "sha256": "80dcdc1ca4cdee85930f621e90864396ece415f77951dd124f5090bed6664cf3"
+    },
+    {
+      "path": "07-press-and-media-kit/MEDIA_FACT_SHEET_2026.md",
+      "bytes": 2907,
+      "sha256": "9e8bc1afbb8cb23c5ec31e33ad149a1bdc3b09e1f27fdb0b1e21f72aae1ec5cf"
+    },
+    {
+      "path": "07-press-and-media-kit/PRESS_FAQ_AND_INTERVIEW_TOPICS.md",
+      "bytes": 2870,
+      "sha256": "b641d8002fcc964490cf362ba6eab19cc6668ee002fc6b86e2ce15329583d5f2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3982,
+      "sha256": "cbbc40280252aa2d83bc6a480a03473cfe64bb72e34ff16227246247c510f51e"
+    }
+  ]
+}

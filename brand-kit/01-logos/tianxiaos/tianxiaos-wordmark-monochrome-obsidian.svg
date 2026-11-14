@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 160" width="720" height="160" role="img" aria-label="tianxiaOS Monochrome Obsidian">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Space+Grotesk:wght@700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      .os { font-family: 'Clash Display', 'Geist', 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 86px; letter-spacing: -1.7px; }
+    </style>
+  </defs>
+  <text x="360" y="110" text-anchor="middle" fill="#080808" class="os">tianxiaOS</text>
+</svg>

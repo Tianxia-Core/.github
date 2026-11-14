@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 240" width="1320" height="240" role="img" aria-label="RASA-X-MACHINA · tianxiaOS">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Space+Grotesk:wght@700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      .rxm { font-family: 'Syne', 'Space Grotesk', system-ui, sans-serif; font-weight: 800; font-size: 56px; letter-spacing: 0px; }
+      .os { font-family: 'Clash Display', 'Geist', 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 62px; letter-spacing: -1.2px; }
+      .sub { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500; font-size: 16px; letter-spacing: 2.2px; }
+    </style>
+    <linearGradient id="rxmGrad" x1="0%" y1="0%" x2="100%" y2="35%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="48%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="osGrad" x1="0%" y1="0%" x2="100%" y2="35%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="45%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <radialGradient id="dualOrb" cx="25%" cy="20%" r="75%">
+      <stop offset="0%" stop-color="#171033"/>
+      <stop offset="100%" stop-color="#06060a"/>
+    </radialGradient>
+  </defs>
+  <rect width="1320" height="240" rx="32" fill="url(#dualOrb)"/>
+  <rect x="1.5" y="1.5" width="1317" height="237" rx="30.5" fill="none" stroke="rgba(124,92,255,0.32)" stroke-width="1.5"/>
+  <text x="660" y="122" text-anchor="middle">
+    <tspan fill="url(#rxmGrad)" class="rxm">RASA-X-MACHINA</tspan>
+    <tspan fill="#64748b" font-family="sans-serif" font-size="44" dx="18" dy="-4">·</tspan>
+    <tspan fill="url(#osGrad)" class="os" dx="18" dy="4">tianxiaOS</tspan>
+  </text>
+  <text x="660" y="178" text-anchor="middle" fill="#94a3b8" class="sub">SOVEREIGN POLYGLOT AI OPERATING SUBSTRATE · TALLINN, ESTONIA</text>
+</svg>

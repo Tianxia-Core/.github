@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 160" width="920" height="160" role="img" aria-label="RASA-X-MACHINA Monochrome White">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Space+Grotesk:wght@700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      .rxm { font-family: 'Syne', 'Space Grotesk', system-ui, sans-serif; font-weight: 800; font-size: 52px; letter-spacing: 0px; }
+    </style>
+  </defs>
+  <text x="460" y="98" text-anchor="middle" fill="#ffffff" class="rxm">RASA-X-MACHINA</text>
+</svg>

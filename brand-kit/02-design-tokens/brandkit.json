@@ -1,0 +1,126 @@
+{
+  "_ffp": "TX-BRANDKIT declarative json",
+  "_source": "ui/brandkit.css (Ethereal Glass on Deep Space) — canonical dual-brand source of truth",
+  "_revision": "TX-BRANDKIT-2026.11-V2",
+  "brands": {
+    "organization": {
+      "wordmark": "RASA-X-MACHINA",
+      "proseName": "Rasa-X-Machina",
+      "proposedEstonianEntity": "RASA-X-MACHINA OÜ (Proposed Tallinn entity upon Estonian Startup Committee approval of Dealum Application #179423)",
+      "cssClass": ".tx-logo-rxm",
+      "fontFamily": "'Syne', sans-serif",
+      "fontWeight": 800,
+      "letterSpacing": "0em",
+      "textTransform": "uppercase",
+      "gradient": "linear-gradient(120deg, #7c5cff 0%, #a855f7 48%, #22d3ee 100%)",
+      "stops": [
+        "#7c5cff",
+        "#a855f7",
+        "#22d3ee"
+      ]
+    },
+    "operatingSystem": {
+      "wordmark": "tianxiaOS",
+      "proseName": "tianxiaOS",
+      "casingRule": "Always lowercase 'tianxia' + uppercase 'OS' (never TianxiaOS or TIANXIAOS, except immutable legacy artifact filenames)",
+      "cssClass": ".tx-logo-os",
+      "fontFamily": "\"Clash Display\", \"Geist\", \"Space Grotesk\", system-ui, sans-serif",
+      "fontWeight": 700,
+      "letterSpacing": "-0.02em",
+      "textTransform": "none",
+      "gradient": "linear-gradient(120deg, #7c5cff 0%, #a855f7 45%, #c084fc 100%)",
+      "stops": [
+        "#7c5cff",
+        "#a855f7",
+        "#c084fc"
+      ]
+    }
+  },
+  "colors": {
+    "void": "#050505",
+    "obsidian": "#080808",
+    "void2": "#0a0a12",
+    "glass": "rgba(255,255,255,0.04)",
+    "glassStrong": "rgba(255,255,255,0.07)",
+    "hairline": "rgba(255,255,255,0.10)",
+    "hairline2": "rgba(255,255,255,0.06)",
+    "aurora1": "#7c5cff",
+    "aurora2": "#22d3ee",
+    "aurora3": "#34d399",
+    "aurora4": "#f472b6",
+    "emeraldSignal": "#00f59b",
+    "ink": "rgba(255,255,255,0.92)",
+    "inkDim": "rgba(255,255,255,0.55)",
+    "purple1": "#7c5cff",
+    "purple2": "#a855f7",
+    "purple3": "#6d28d9",
+    "purple4": "#c084fc"
+  },
+  "gradients": {
+    "rxm": "linear-gradient(120deg, #7c5cff 0%, #a855f7 48%, #22d3ee 100%)",
+    "tianxiaOS": "linear-gradient(120deg, #7c5cff 0%, #a855f7 45%, #c084fc 100%)",
+    "purple": "linear-gradient(120deg, #7c5cff 0%, #a855f7 45%, #c084fc 100%)",
+    "royal": "linear-gradient(135deg, #6d28d9 0%, #7c5cff 50%, #22d3ee 100%)"
+  },
+  "type": {
+    "rxmLogo": [
+      "Syne",
+      "sans-serif"
+    ],
+    "osLogo": [
+      "Clash Display",
+      "Geist",
+      "Space Grotesk",
+      "system-ui",
+      "sans-serif"
+    ],
+    "display": [
+      "Clash Display",
+      "Geist",
+      "Space Grotesk",
+      "system-ui",
+      "sans-serif"
+    ],
+    "body": [
+      "Geist",
+      "Plus Jakarta Sans",
+      "system-ui",
+      "sans-serif"
+    ],
+    "mono": [
+      "Geist Mono",
+      "JetBrains Mono",
+      "ui-monospace",
+      "monospace"
+    ],
+    "h1": "clamp(2.5rem, 6vw, 5.5rem)",
+    "eyebrow": "0.625rem"
+  },
+  "space": {
+    "unit": "1.5rem",
+    "section": "clamp(5rem, 12vw, 10rem)",
+    "rOuter": "2rem",
+    "rInner": "1.625rem"
+  },
+  "motion": {
+    "ease": "cubic-bezier(0.32, 0.72, 0, 1)",
+    "dur": "700ms",
+    "entry": "tx-rise 800ms"
+  },
+  "fx": {
+    "glow": "0 0 60px -12px rgba(168,85,247,0.55)",
+    "glowPurple": "0 0 80px -16px rgba(124,92,255,0.6)",
+    "shadowSoft": "0 24px 80px -32px rgba(0,0,0,0.8)"
+  },
+  "rules": {
+    "bannedFonts": [
+      "Inter",
+      "Roboto",
+      "Arial"
+    ],
+    "motionLaw": "mass + spring cubic-bezier(0.32, 0.72, 0, 1), never linear/ease-in-out",
+    "shell": "double-bezel glass panel (outer shell + inner core)",
+    "currencyLaw": "100% single-currency consistency per view across 42 markets and 29 currencies",
+    "contactShieldLaw": "Zero raw phone numbers or plaintext mailto: links in static HTML/JSON-LD; route via TX_CONTACT_SHIELD and /whatsapp"
+  }
+}

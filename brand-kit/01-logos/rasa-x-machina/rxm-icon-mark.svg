@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="RASA-X-MACHINA Icon Mark">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Space+Grotesk:wght@700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      .rxm-m { font-family: 'Syne', 'Space Grotesk', system-ui, sans-serif; font-weight: 800; }
+    </style>
+    <linearGradient id="rxmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="48%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="bgGlow" cx="25%" cy="20%" r="75%">
+      <stop offset="0%" stop-color="#171136"/>
+      <stop offset="100%" stop-color="#06060a"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgGlow)"/>
+  <rect x="14" y="14" width="484" height="484" rx="98" fill="none" stroke="url(#rxmGrad)" stroke-opacity="0.45" stroke-width="3"/>
+  <polygon points="256,64 424,160 424,352 256,448 88,352 88,160" fill="rgba(124,92,255,0.08)" stroke="url(#rxmGrad)" stroke-width="6"/>
+  <text x="256" y="280" text-anchor="middle" fill="url(#rxmGrad)" font-size="76" class="rxm-m">RXM</text>
+</svg>

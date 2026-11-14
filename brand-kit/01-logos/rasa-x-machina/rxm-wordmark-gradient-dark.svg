@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 220" width="960" height="220" role="img" aria-label="RASA-X-MACHINA">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Space+Grotesk:wght@700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      .rxm { font-family: 'Syne', 'Space Grotesk', system-ui, sans-serif; font-weight: 800; font-size: 54px; letter-spacing: 0px; }
+    </style>
+    <linearGradient id="rxmGrad" x1="0%" y1="0%" x2="100%" y2="35%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="48%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <radialGradient id="orbV" cx="18%" cy="20%" r="65%">
+      <stop offset="0%" stop-color="#7c5cff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#050508" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="220" rx="28" fill="#08080c"/>
+  <rect width="960" height="220" rx="28" fill="url(#orbV)"/>
+  <rect x="1.5" y="1.5" width="957" height="217" rx="26.5" fill="none" stroke="rgba(124,92,255,0.28)" stroke-width="1.5"/>
+  <text x="480" y="128" text-anchor="middle" fill="url(#rxmGrad)" class="rxm">RASA-X-MACHINA</text>
+</svg>

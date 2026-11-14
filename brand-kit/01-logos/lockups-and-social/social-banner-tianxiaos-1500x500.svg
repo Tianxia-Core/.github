@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500" role="img" aria-label="tianxiaOS Official Banner">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Space+Grotesk:wght@700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+      .os { font-family: 'Clash Display', 'Geist', 'Space Grotesk', system-ui, sans-serif; font-weight: 700; font-size: 84px; letter-spacing: -1.7px; }
+      .rxm { font-family: 'Syne', 'Space Grotesk', system-ui, sans-serif; font-weight: 800; font-size: 21px; letter-spacing: 0px; }
+      .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050508"/>
+      <stop offset="55%" stop-color="#130b29"/>
+      <stop offset="100%" stop-color="#080812"/>
+    </linearGradient>
+    <linearGradient id="osGrad" x1="0%" y1="0%" x2="100%" y2="30%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="45%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="rxmGrad" x1="0%" y1="0%" x2="100%" y2="30%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="48%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="1500" height="500" fill="url(#bg)"/>
+  <circle cx="1240" cy="140" r="250" fill="#a855f7" fill-opacity="0.14"/>
+  <text x="110" y="188" fill="url(#osGrad)" class="os">tianxiaOS</text>
+  <text x="110" y="250">
+    <tspan fill="#cbd5e1" class="mono" font-size="20">Formally Verified seL4/NixOS Sovereign AI Runtime &amp; 2,816-Node Omni-Lattice by </tspan>
+    <tspan fill="url(#rxmGrad)" class="rxm">RASA-X-MACHINA</tspan>
+  </text>
+  <text x="110" y="324" fill="#00f59b" class="mono" font-weight="700" font-size="21">7 Signed OS Formats (.deb · .rpm · .AppImage · flake.nix · .tar.gz · .exe · .apk)  |  Ed25519 Verified</text>
+  <text x="110" y="392" fill="#94a3b8" class="mono" font-size="20">tianxia.rasaxmachina.com  ·  github.com/Tianxia-Core/tianxiaos-releases  ·  Tallinn, Estonia</text>
+</svg>
