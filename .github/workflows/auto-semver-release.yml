@@ -1,0 +1,152 @@
+# ffp: FFP-GH-AUTO-SEMVER content-pipeline yaml
+name: Build Law Clean-Room Gate & Automatic SemVer Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanroom-and-semver-release:
+    name: Clean-Room Isolation Gate & Automated SemVer Release
+    if: "!contains(github.event.head_commit.message, '[skip release]') && !startsWith(github.event.head_commit.message, 'chore(release):') && !startsWith(github.event.head_commit.message, 'ci(build-law):')"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Full History & Tags
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go Toolchain (if Go project)
+        if: hashFiles('go.mod', 'go/go.mod') != ''
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Execute Clean-Room Public Edition Firewall & Cut SemVer Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_FULL: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import datetime as dt, hashlib, json, os, pathlib, re, shutil, subprocess, sys, tarfile
+
+          repo = os.environ["REPO_FULL"]
+          repo_slug = repo.split("/")[-1]
+          if repo_slug in (".github", "collinstaken525-cloud"):
+              print(f"Profile meta-repository {repo}; skipping binary release.")
+              sys.exit(0)
+
+          # 1. Clean-Room Public Isolation Gate (blocks internal DBs, lead lists, keys, PII paths)
+          bad_path_re = re.compile(
+              r"(\.(xlsx|xls|sqlite3?|db|keystore|jks|p12|pfx)$|(^|/)\.env(\..+)?$|(?<!\.pub)\.pem$|"
+              r"grinfi|8raise|career_opportunities\.json|merged_signals\.jsonl|rail_events\.jsonl|dealum_.*_update_guide)",
+              re.I,
+          )
+          allowed_names = {".env.example", "config.example.json", "merged_signals.schema.json"}
+          tracked = subprocess.check_output(["git", "ls-files"], text=True).splitlines()
+          leaks = [f for f in tracked if pathlib.Path(f).name not in allowed_names and bad_path_re.search(f)]
+          if leaks:
+              print(f"[CLEANROOM FIREWALL BLOCK] Forbidden internal files in public tree: {leaks}", file=sys.stderr)
+              sys.exit(1)
+
+          # 2. Check if HEAD already has a published SemVer release (e.g. multi-OS tx_package_builder upload)
+          head_tags = subprocess.check_output(["git", "tag", "--points-at", "HEAD"], text=True).splitlines()
+          semver_re = re.compile(r"^v(\d+)\.(\d+)\.(\d+)$")
+          for t in head_tags:
+              if semver_re.match(t):
+                  rc = subprocess.run(["gh", "release", "view", t, "--repo", repo], capture_output=True).returncode
+                  if rc == 0:
+                      print(f"HEAD already has published release {t}; skipping duplicate release.")
+                      sys.exit(0)
+
+          # 3. Determine latest SemVer release tag and compute next bump from Conventional Commits
+          rel_out = subprocess.check_output(["gh", "release", "list", "--repo", repo, "--limit", "10", "--json", "tagName"], text=True)
+          releases = json.loads(rel_out or "[]")
+          latest_tag = None
+          maj, min_v, pat = 1, 0, 0
+          for r in releases:
+              m = semver_re.match(r.get("tagName", ""))
+              if m:
+                  latest_tag = r["tagName"]
+                  maj, min_v, pat = int(m.group(1)), int(m.group(2)), int(m.group(3))
+                  break
+
+          if latest_tag is None:
+              next_tag = "v1.0.0"
+              log_range = ["-n", "20"]
+          else:
+              tag_exists = subprocess.run(["git", "rev-parse", "-q", "--verify", f"refs/tags/{latest_tag}"], capture_output=True).returncode == 0
+              log_range = [f"{latest_tag}..HEAD"] if tag_exists else ["-n", "1"]
+              commits = subprocess.check_output(["git", "log", "--pretty=%s%n%b", *log_range], text=True)
+              if not commits.strip():
+                  print(f"No new commits since {latest_tag}; nothing to release.")
+                  sys.exit(0)
+              if "BREAKING CHANGE" in commits or re.search(r"^[a-z]+(\([^)]+\))?!:", commits, re.M):
+                  maj, min_v, pat = maj + 1, 0, 0
+              elif re.search(r"^feat(\([^)]+\))?:", commits, re.M):
+                  min_v, pat = min_v + 1, 0
+              else:
+                  pat += 1
+              next_tag = f"v{maj}.{min_v}.{pat}"
+
+          dist = pathlib.Path("dist_auto_release")
+          dist.mkdir(parents=True, exist_ok=True)
+
+          # 4. Build Clean-Room Source & Asset Tarball
+          tar_path = dist / f"{repo_slug.lower()}-{next_tag}-cleanroom.tar.gz"
+          with tarfile.open(tar_path, "w:gz") as tf:
+              for f in tracked:
+                  if os.path.isfile(f):
+                      tf.add(f, arcname=f"{repo_slug}-{next_tag}/{f}")
+
+          # Optional Go static multi-OS binaries if go.mod exists
+          go_dir = pathlib.Path(".") if pathlib.Path("go.mod").is_file() else (pathlib.Path("go") if pathlib.Path("go/go.mod").is_file() else None)
+          if go_dir is not None and shutil.which("go"):
+              cmd_sub = sorted((go_dir / "cmd").iterdir()) if (go_dir / "cmd").is_dir() else []
+              pkg = f"./cmd/{cmd_sub[0].name}" if cmd_sub else "."
+              for goos, goarch, suf in [("linux", "amd64", "linux-x86_64"), ("linux", "arm64", "linux-aarch64"), ("windows", "amd64", "windows-x86_64.exe")]:
+                  env = {**os.environ, "CGO_ENABLED": "0", "GOOS": goos, "GOARCH": goarch}
+                  out_bin = dist / f"{repo_slug.lower()}-{next_tag}-{suf}"
+                  subprocess.run(["go", "build", "-trimpath", "-ldflags=-s -w", "-o", str(out_bin.resolve()), pkg], cwd=str(go_dir), env=env, check=False)
+
+          # 5. Generate CycloneDX 1.5 SBOM & SHA256SUMS
+          components = []
+          sums = []
+          for p in sorted(dist.iterdir()):
+              if p.is_file():
+                  h = hashlib.sha256(p.read_bytes()).hexdigest()
+                  sums.append(f"{h}  {p.name}")
+                  components.append({"type": "file", "name": p.name, "version": next_tag.lstrip("v"), "hashes": [{"alg": "SHA-256", "content": h}]})
+
+          sbom = {
+              "bomFormat": "CycloneDX",
+              "specVersion": "1.5",
+              "version": 1,
+              "metadata": {
+                  "timestamp": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+                  "component": {"type": "application", "name": repo_slug, "version": next_tag.lstrip("v"), "edition": "PUBLIC_CLEANROOM_SEED"},
+              },
+              "components": components,
+          }
+          sbom_path = dist / "SBOM.cdx.json"
+          sbom_path.write_text(json.dumps(sbom, indent=2) + "
+", encoding="utf-8")
+          sums.append(f"{hashlib.sha256(sbom_path.read_bytes()).hexdigest()}  SBOM.cdx.json")
+          (dist / "SHA256SUMS").write_text("
+".join(sums) + "
+", encoding="utf-8")
+
+          assets = sorted(str(p) for p in dist.iterdir() if p.is_file())
+          subprocess.run([
+              "gh", "release", "create", next_tag, *assets,
+              "--repo", repo,
+              "--title", f"{repo_slug} {next_tag} — Clean-Room Verified Release",
+              "--generate-notes",
+          ], check=True)
+          print(f"Published {repo} {next_tag} ({len(assets)} verified clean-room assets)")
+          PY
